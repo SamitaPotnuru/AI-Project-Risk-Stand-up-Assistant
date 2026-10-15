@@ -1,0 +1,42 @@
+flowchart TD
+    %% User Authentication Flow
+    A([User Opens Application]) --> B[Enter Username & Password]
+    B --> C{Authenticate via SHA-256}
+    C -- Invalid Credentials --> B1[Display Alert & Reject]
+    B1 --> B
+    C -- Valid Credentials --> D{Role Check}
+
+    %% Employee Pathway
+    D -- Role: Employee --> E[Employee Workspace]
+    E --> F[View Assigned Projects & Personal Metrics]
+    E --> G[Fill Daily Stand-up Form]
+    G --> H{Validation Engine<br/>Mandatory text, 100% on Completed,<br/>Explicit blocker explanation}
+    H -- Validation Failed --> G1[Show Contextual Form Alerts]
+    G1 --> G
+    H -- Validation Passed --> I[Atomic Write to db.json<br/>Safe .tmp swap & db.backup.json]
+    I --> J[Personal History & Audit Trail]
+    J --> G
+
+    %% Data Pipeline & Engine
+    I --> K[(Persistent Data Store: db.json)]
+    K --> L[Rule-Based Risk Classification Engine]
+    L -->|Evaluates Schedules, Blockers, Stale Submissions| M[Risk Evidence & Categorization Matrix]
+
+    %% Manager Pathway
+    D -- Role: Manager --> N[Manager Dashboard & Analytics]
+    M --> N
+    N --> O[Executive Metrics & Plotly Visual Analytics<br/>Status Donut, Risk Bar, Project Progress]
+    N --> P[Team Updates Tracker<br/>Multi-filter, Search, CSV Export]
+    N --> Q[Risk Monitoring & Evidence Inspector<br/>High / Medium / Low Details & Suggested Next Steps]
+    N --> R[Manager Action Panel<br/>Log Review Decisions, Directives, Follow-up Dates]
+    R --> I
+    N --> S[AI Stand-up Assistant<br/>LLM Synthesis or Deterministic Fallback]
+    S --> T[Executive Briefing & Downloadable Markdown Reports]
+
+    %% Stage 2 Business Review Improvements (Zero-Cost Scaling)
+    subgraph Stage2_Enhancements["30-Day Business Review Improvements"]
+        U[Chat Webhook Ingestion<br/>Slack / Teams Free Webhook API] -.->|Bypass Elimination| I
+        V[Adaptive Role Templates<br/>Backend / Frontend / DevOps] -.->|Standardized Input| G
+        W[AI Confidence Scoring & 1-Click Verification] -.->|Eliminates False Blockers| R
+        X[Reciprocal Daily Focus Digest] <-.-|Daily Utility Back to Engineer| J
+    end
