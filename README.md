@@ -130,3 +130,7 @@ Open your browser and navigate to:
 ## 💾 Atomic JSON Storage Guarantee
 - Updates are saved to `db.tmp` first and swapped to `db.json` via atomic `os.replace`.
 - Automatic backup snapshots (`db.backup.json`) are updated upon every save to guarantee zero data loss during sudden process interruptions.
+
+<img width="1833" height="789" alt="image" src="https://github.com/user-attachments/assets/b8111fee-5a3b-42ea-8b10-4f2d04c44301" />
+<img width="1882" height="826" alt="image" src="https://github.com/user-attachments/assets/e10b69f4-6f43-4671-8a9b-340673f8449f" />
+<img width="1894" height="821" alt="image" src="https://github.com/user-attachments/assets/10a0978e-db43-48df-9db5-39e64f52bb9d" />
