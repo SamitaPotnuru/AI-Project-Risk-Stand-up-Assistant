@@ -3,8 +3,6 @@
 
 A professional, zero-cost web application built with **Python**, **Streamlit**, **Pandas**, and **Plotly** that centralizes asynchronous daily stand-up check-ins, deterministically detects delivery bottlenecks, equips engineering managers with actionable briefings, and scales seamlessly across multi-squad operations.
 
-> 📄 **Complete Consolidated Submission:** For the full, single-document submission formatted for Google Docs (including Problem Statement, Solution with Build, Workflow Diagram, Reflection, 30-Day Business Review, and AI Design Log), view [**`FINAL_SUBMISSION.md`**](file:///c:/Users/RAJU/Downloads/AI%20Project%20Risk%20&%20Stand-up%20Assistant/FINAL_SUBMISSION.md).
-
 ---
 
 ## 📌 1. Problem Statement
