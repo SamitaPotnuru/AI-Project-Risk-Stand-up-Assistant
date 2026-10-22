@@ -15,9 +15,7 @@ The **AI Project Risk & Stand-up Assistant** solves this by:
 
 ---
 
-## 🎥 2. Solution Walkthrough & Loom Build Demo
-- **Video Walkthrough (Loom):** [Watch the End-to-End Build Demonstration](https://www.loom.com/share/demo-ai-project-assistant)
-- 
+## 🎥 2. Solution Walkthrough 
 ### Why this Solution?
 - **Zero Cost & Instant Time-to-Value:** Built in Python & Streamlit; requires no paid SaaS subscriptions or heavy database setups.
 - **Hybrid AI Architecture:** Heuristic rules evaluate schedules and blockers with 100% determinism; the LLM focuses purely on executive synthesis and natural language assistance.
